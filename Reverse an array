@@ -1,0 +1,96 @@
+// Reverse an array 
+
+// import java.util.*;
+
+// public class Main{
+//     public static void main(String[] args){
+//         int [] arr = {10,20,30,40,50};
+        
+//         int start = 0;
+//         int end = arr.length-1;
+        
+//         while(start<end){
+//             int temp = arr[start];
+//             arr[start]= arr[end];
+//             arr[end]=temp;
+            
+            
+//         start++;
+//         end--;
+
+//         }
+        
+//         System.out.println("Reverse an array :" + Arrays.toString(arr));
+//     }
+// }
+// import java.util.*;
+// // import java.util.Scanner;
+// public class Main{
+//     public static void main(String[] args){
+//         Scanner sc = new Scanner(System.in);
+        
+//         System.out.println("Enter the size of an array");
+//         int n = sc.nextInt();
+        
+//         int[] arr = new int[n];
+        
+//         System.out.println("Enter the no of elements of an array");
+//         for(int i=0; i<n; i++){
+//             arr[i] = sc.nextInt();
+//         }
+        
+//         int start = 0;
+//         int end = arr.length-1;
+        
+//         while(start<end){
+//             int temp = arr[start];
+//             arr[start] = arr[end];
+//             arr[end] = temp;
+            
+            
+//             start++;
+//             end--;
+//         }
+        
+//         System.out.println("Reverse an array:" + Arrays.toString(arr));
+        
+//     }
+// }
+
+
+// write a java program to check array is sorted or not 
+// int [] arr = {4,3,1,5,6};
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter the size of an array");
+        int size = sc.nextInt();
+        
+        int[] arr = new int[size];
+        
+        System.out.println("Enter the no of elements of an array");
+        for(int i = 0; i<size; i++){
+            arr[i] = sc.nextInt();
+        }
+        
+        boolean isSorted = true;
+        
+        for(int i=0; i<size-1; i++){
+            if(arr[i]>arr[i+1]){
+                isSorted = false;
+                break;
+            }
+        }
+        
+        if(isSorted){
+            System.out.println("Array is Sorted");
+        }
+        else{
+            System.out.println("Array is not Sorted");
+        }
+
+    }
+}
